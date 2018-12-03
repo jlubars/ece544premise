@@ -397,7 +397,7 @@ class FormulaNet(nn.Module):
         index = 0
         for xv_id in G.nodes.keys():
             right_indices[xv_id] = []
-            for _, xu_id, xw_id in treelets[xv_id][2]:
+            for xu_id, xw_id, _ in treelets[xv_id][2]:
                 right_indices[xv_id].append(index)
                 index += 1
 
