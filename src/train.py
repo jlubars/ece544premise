@@ -140,7 +140,7 @@ for epoch in range(args.start_epoch, args.epochs):
 		statement_graph_batch.append(statement_graph)
 		label_batch.append(label)
 
-		if batch_index < args.batch_size: # Keep collecting (conjecture, statement) pairs.
+		if batch_index < args.batch_size - 1: # Keep collecting (conjecture, statement) pairs.
 			batch_index += 1
 			continue
 
